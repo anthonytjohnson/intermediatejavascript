@@ -297,4 +297,23 @@ const dogFactory = (name, breed, weight) => {
 
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------ 
- 
+
+// Write a function factorial() that takes a number as an argument and returns the factorial of the number.
+
+// Example:
+
+// factorial(6); 
+// returns `720` because 6 * 5 * 4 * 3 * 2 * 1 = 720 
+
+// Assume only positive numbers will be given as an argument for the factorial() function.
+
+// Write function below
+const factorial = n => {
+  let result = 1;
+  
+  for (let i=n; i>0; i--) {
+    result *= i;
+  }
+
+  return result;
+}
