@@ -317,3 +317,41 @@ const factorial = n => {
 
   return result;
 }
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+// Write a function subLength() that takes 2 parameters, a string and a single character. The function should search the string for the two occurrences of the character and return the length between them including the 2 characters. If there are less than 2 or more than 2 occurrences of the character the function should return 0.
+
+// Examples:
+
+// subLength('Saturday', 'a'); // returns 6
+// subLength('summer', 'm'); // returns 2
+// subLength('digitize', 'i'); // returns 0
+// subLength('cheesecake', 'k'); // returns 0
+
+// Write function below
+const subLength = (string, char) => {
+  const array = string.toLowerCase().split("");
+  const index = [];
+  let count = 0;
+  for(const el of array) {
+    if (char === el) {
+      count += 1;
+      index.push(array.indexOf(el));
+      index.push(array.lastIndexOf(el));
+    }
+  }
+  if (count === 2) {
+    return index[1]-index[0]+1;
+  } else {
+    return 0;
+  }
+  console.log(count);
+  console.log(index);
+}
+
+subLength('funny', 'n');
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
